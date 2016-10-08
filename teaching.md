@@ -7,6 +7,8 @@ permalink: /teaching/
 
 <h2 class="content-subhead"> Slides from my talks </h2>
 
+Wwooww am i on the dev branch
+
 <div class="pure-g">
 {% for page in site.pages %}
   {% if page.layout == 'slide' %}
