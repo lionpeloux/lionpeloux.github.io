@@ -5,7 +5,10 @@ subtitle: main ressources about talks and workshops
 permalink: /teaching/
 ---
 
+
 <h2 class="content-subhead"> Slides from my talks </h2>
+
+sdsldskmdksmldmslkmsdksmdlk
 
 <div class="pure-g">
 {% for page in site.pages %}
