@@ -1,0 +1,50 @@
+{
+  "name": "reveal.js-menu",
+  "version": "0.7.0",
+  "description": "A slideout menu for navigating reveal.js presentations",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denehyg/reveal.js-menu.git"
+  },
+  "keywords": [
+    "reveal",
+    "menu"
+  ],
+  "author": {
+    "name": "Greg Denehy"
+  },
+  "license": "MIT, Copyright (C) 2016 Greg Denehy",
+  "bugs": {
+    "url": "https://github.com/denehyg/reveal.js-menu/issues"
+  },
+  "homepage": "https://github.com/denehyg/reveal.js-menu#readme",
+  "gitHead": "fa7249f44b9cf6c574d4d554019f48d389b59ad0",
+  "_id": "reveal.js-menu@0.7.0",
+  "_shasum": "345a5dfb90171afa36097670a41a8ff44f50d9d2",
+  "_from": "reveal.js-menu@latest",
+  "_npmVersion": "3.5.3",
+  "_nodeVersion": "5.5.0",
+  "_npmUser": {
+    "name": "denehyg",
+    "email": "greg@inclose.com.au"
+  },
+  "dist": {
+    "shasum": "345a5dfb90171afa36097670a41a8ff44f50d9d2",
+    "tarball": "https://registry.npmjs.org/reveal.js-menu/-/reveal.js-menu-0.7.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "denehyg",
+      "email": "greg@inclose.com.au"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/reveal.js-menu-0.7.0.tgz_1470482883454_0.5317925915587693"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/reveal.js-menu/-/reveal.js-menu-0.7.0.tgz"
+}

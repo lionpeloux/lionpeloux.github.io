@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <style>
+      .header {
+        font-family: 'Cabin Sketch', cursive;
+        /*font-size: 38px;*/
+        color:black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="layout">
+
+      {% include sidemenu.html %}
+
+      <div id="main">
+        {% comment %}
+        {% highlight ruby %}{{ page.url }}{% endhighlight ruby %}
+        {% highlight ruby %}{{ site.baseurl }}/about/{% endhighlight ruby %}
+        {% highlight ruby %}{{ '/about/' | prepend: site.baseurl }}{% endhighlight ruby %}
+        {% highlight ruby %}{{site.baseurl}} == {{ page.url }}{% endhighlight ruby %}
+        {% endcomment %}
+
+          <div class="header">
+              <h1>{{ page.title }}</h1>
+              <h2>{{ page.subtitle }}</h2>
+          </div>
+          <div class="content">
+            {{ content }}
+          </div>
+      </div>
+  </div>
+    {% include script.html %}
+  </body>
+</html>

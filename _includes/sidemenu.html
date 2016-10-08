@@ -1,0 +1,47 @@
+<!-- Menu toggle -->
+<a href="#menu" id="menuLink" class="menu-link">
+    <!-- Hamburger icon -->
+    <span></span>
+</a>
+
+<div id="menu">
+    <div class="pure-menu">
+        <a class="pure-menu-heading" href="{{ site.baseurl }}/index.html">HOME</a>
+        <ul class="pure-menu-list">
+
+          {% for link in site.data.sidemenu %}
+            {% unless link.layout == 'home' %}
+              {% assign current = nil %}
+              {% assign break = "" %}
+              {% if page.url == link.url or page.layout == link.layout %}
+                {% assign current = 'pure-menu-selected' %}
+              {% endif %}
+              {% if link.divided == 1 %}
+                {% assign break = 'menu-item-divided' %}
+              {% endif %}
+              <li class="pure-menu-item {{ current }} {{ break }} {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+                <a class="pure-menu-link {{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endunless %}
+          {% endfor %}
+
+            {% comment %}
+            {% for link in site.navigation %}
+              {% unless link.layout == 'home' %}
+                {% assign current = nil %}
+                {% assign break = "" %}
+                {% if page.url == link.url or page.layout == link.layout %}
+                  {% assign current = 'pure-menu-selected' %}
+                {% endif %}
+                {% if link.divided == 1 %}
+                  {% assign break = 'menu-item-divided' %}
+                {% endif %}
+                <li class="pure-menu-item {{ current }} {{ break }} {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+                  <a class="pure-menu-link {{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+                </li>
+              {% endunless %}
+            {% endfor %}
+            {% endcomment %}
+        </ul>
+    </div>
+</div>

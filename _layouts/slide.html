@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>{{page.title}}</title>
+
+    <!-- REVAL.js -->
+		<link rel="stylesheet" href="{{site.baseurl}}/revealjs/css/reveal.css">
+
+    <!-- CUSTOM CSS  -->
+    <link rel="stylesheet" href="{{site.baseurl}}{{page.url}}customize.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="{{site.baseurl}}/revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '{{site.baseurl}}/revealjs/css/print/pdf.css' : '{{site.baseurl}}/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <!--  JSXGRAPH -->
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/jsxgraph.css"/>
+    <script type="text/javascript" src="{{site.baseurl}}/js/jsxgraphcore.js"></script>
+  </head>
+  <body>
+    
+    {{content}}
+
+    {% include_relative config.html %}
+
+  </body>
+</html>

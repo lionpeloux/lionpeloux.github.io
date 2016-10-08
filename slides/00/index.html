@@ -1,0 +1,25 @@
+---
+layout: slide
+
+title: Slide 00
+date: 2016-10-12
+place: ENPC
+category : ENPC
+description: blablablablablabl
+
+includes:
+- content.html
+---
+
+<div class="reveal">
+
+	<img id="unilogo" src="img/logo.svg" class="imageposition-unilogo desktop-image"></img>
+
+	<div class="slides">
+
+		{% for item in page.includes %}
+				{% include_relative /content/{{item}} %}
+    {% endfor %}
+
+	</div>
+</div>

@@ -1,0 +1,42 @@
+---
+- text: LdP
+  url: /
+  layout: home
+  divided: 0
+
+- text: About
+  url: /about/
+  layout: page
+  divided: 0
+
+- text: Egineering
+  url: /engineering/
+  layout: page
+  divided: 1
+
+- text: Research
+  url: /research/
+  layout: page
+  divided: 0
+
+- text: Teaching
+  url: /teaching/
+  layout: page
+  divided: 0
+
+- text: Curriculum
+  url: /cv/
+  layout: curriculum
+  divided: 1
+
+- text: Contact
+  url: /contact/
+  layout: page
+  divided: 0
+
+- text: Blog
+  url: /blog/
+  layout: post
+  divided: 0
+
+---

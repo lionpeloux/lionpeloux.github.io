@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="../../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="css/thinkshell.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../revealjs/css/print/pdf.css' : '../../revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="../../css/jsxgraph.css"/>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.5/jsxgraphcore.js"></script>
+
+	</head>
+	<body>
+		<div class="header"></div>
+			<div class="reveal">
+
+
+				<div class="slides">
+
+					<section>
+						<div id="box" class="jxbox" style="width:500px; height:500px; margin-left:auto; margin-right:auto;"></div>
+							<script type="text/javascript">
+								var board = JXG.JSXGraph.initBoard('box',{
+									boundingbox: [-10, 10, 10, -10],
+									axis:false,
+									showCopyright:false,
+									showNavigation:false
+									});
+
+								p1 = board.create('point',[-4,0],{
+									name:'p1',
+									fixed:true,
+									size: 3,
+									infoboxtext:'infoboxtext',
+									strokeColor: 'black',
+									fillColor: 'white',
+									strokeWidth: 2,
+									strokeOpacity: 1,
+									fillOpacity: 1,
+								});
+								p2 = board.create('point',[0,0],{
+									name:'p1',
+									fixed:true,
+									size: 3,
+									infoboxtext:'infoboxtext',
+									strokeColor: 'black',
+									fillColor: 'white',
+									strokeWidth: 2,
+									strokeOpacity: 1,
+									fillOpacity: 1,
+								});
+								p3 = board.create('point',[4,-1],{
+									name:'p1',
+									fixed:false,
+									size: 3,
+									infoboxtext:'infoboxtext',
+									strokeColor: 'black',
+									fillColor: 'white',
+									strokeWidth: 2,
+									strokeOpacity: 1,
+									fillOpacity: 1,
+								});
+								var ang1 = board.create('angle',[p1,p2,p3],{name:''});
+								var cc1 = board.create('circumcircle', [p1, p2, p3], {
+									strokeColor: '#51BAE8 ',
+								});
+							</script>
+					</section>
+
+					<section data-markdown data-background="img/gs1.jpg">
+						<script type="text/template">
+							#### wooden gridshell
+							pouet lsdjlsdj lsd lsjd
+						</script>
+					</section>
+
+					<section data-markdown data-background="">
+						<script type="text/template">
+							## What about Torsion
+							### The HTML Presentation Framework
+						</script>
+					</section>
+
+					<section data-markdown style="text-align:left">
+						<script type="text/template">
+							#Discret Curvature
+							##The 3pts circle
+							1. why this approach ?
+							2. what ?
+
+							$$\frac{1}{n}\sqrt{e^\frac{1}{n} - e^\frac{1}{n+1}}\sim\frac{1}{n^2}$$
+						</script>
+					</section>
+
+					<section>
+						<img src="img/gs1.jpg"  height="auto" width="100%">
+					</section>
+
+					<section tagcloud bw data-transition="zoom-in fade-out">
+				    Twitter Bootstrap
+				    jQuery
+				    less
+				    GruntJS
+				    JSHint
+				    JSLint
+				    markdown
+				    sass
+				    jade
+				    coffeescript
+				    codekit
+				    livereload
+				    web-build
+				    jQuery UI
+				    mustache
+				    emmet.io
+				    bower
+				    browserstack
+				    npm
+				    RequireJS
+				    socket.io
+				    jQuery Mobile
+				    node.js
+				    Jasmine
+					</section>
+
+					<section data-markdown="test.md"
+					         data-separator="^\n\n\n"
+					         data-separator-vertical="^\n\n"
+					         data-separator-notes="^Note:"
+					         data-charset="iso-8859-15">
+					</section>
+
+				</div>
+		</div>
+		<script src="../../revealjs/lib/js/head.min.js"></script>
+		<script src="../../revealjs/js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				math: {
+	        mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+	        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+    		},
+
+				menu: {
+	        side: 'right',
+	        numbers: true,
+					titleSelector: 'h1, h2, h3, h4, h5, h6',
+					hideMissingTitles: false,
+        	markers: true,
+					custom: false,
+					themes: [
+            { name: 'Black', theme: '../../revealjs/css/theme/black.css' },
+            { name: 'White', theme: '../../revealjs/css/theme/white.css' },
+            { name: 'League', theme: '../../revealjs/css/theme/league.css' },
+            { name: 'Sky', theme: '../../revealjs/css/theme/sky.css' },
+            { name: 'Beige', theme: '../../revealjs/css/theme/beige.css' },
+            { name: 'Simple', theme: '../../revealjs/css/theme/simple.css' },
+            { name: 'Serif', theme: '../../revealjs/css/theme/serif.css' },
+            { name: 'Blood', theme: '../../revealjs/css/theme/blood.css' },
+            { name: 'Night', theme: '../../revealjs/css/theme/night.css' },
+            { name: 'Moon', theme: '../../revealjs/css/theme/moon.css' },
+            { name: 'Solarized', theme: '../../revealjs/css/theme/solarized.css' },
+						{ name: 'Thinkshell', theme: 'css/thinkshell.css' }
+        ],
+
+        transitions: true,
+        openButton: true,
+        openSlideNumber: false,
+        keyboard: true
+				},
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../revealjs/plugin/tagcloud/tagcloud.js', async: true } ,
+					{ src: '../../revealjs/plugin/menu/menu.js' },
+					{ src: '../../revealjs/plugin/math/math.js', async: true },
+					{ src: '../../revealjs/plugin/markdown/marked.js' },
+					{ src: '../../revealjs/plugin/markdown/markdown.js' },
+					{ src: '../../revealjs/plugin/notes/notes.js', async: true },
+					{ src: '../../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

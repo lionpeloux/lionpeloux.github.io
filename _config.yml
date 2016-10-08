@@ -1,0 +1,57 @@
+# Setup
+title:            Lionel du Peloux
+tagline:          'professional page'
+description:      ''
+url:              http://lionpeloux.github.io
+
+# Author Details
+author:         'Lionel du Peloux'
+email: lionel.dupeloux@gmail.com
+
+baseurl: "" # the subpath of your site, e.g. /blog
+github_username:  lionpeloux
+
+# Dependencies
+markdown:         redcarpet
+
+# Permalinks
+permalink:        pretty
+# relative_permalinks: true
+
+incremental: true
+
+# pages: ./pages2
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Load plugins
+gems: ['jekyll/scholar']
+
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  group_by: none
+  group_order: ascending
+
+  source: ./_bibliography
+  bibliography: my.bib
+  bibliography_template: "{{reference}}"
+
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: true
+  bibtex_filters:
+  - superscript
+  - latex
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
