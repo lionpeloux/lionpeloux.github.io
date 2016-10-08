@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Slide 00</title>
+
+    <!-- REVAL.js -->
+		<link rel="stylesheet" href="/revealjs/css/reveal.css">
+
+    <!-- CUSTOM CSS  -->
+    <link rel="stylesheet" href="/slides/00/customize.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/revealjs/css/print/pdf.css' : '/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <!--  JSXGRAPH -->
+    <link rel="stylesheet" type="text/css" href="/css/jsxgraph.css"/>
+    <script type="text/javascript" src="/js/jsxgraphcore.js"></script>
+  </head>
+  <body>
+    
+    <div class="reveal">
+
+	<img id="unilogo" src="img/logo.svg" class="imageposition-unilogo desktop-image"></img>
+
+	<div class="slides">
+
+		
+				
+<section>
+	<div id="box" class="jxbox" style="width:500px; height:500px; margin-left:auto; margin-right:auto;"></div>
+	<script type="text/javascript">
+		var board = JXG.JSXGraph.initBoard('box',{
+			boundingbox: [-10, 10, 10, -10],
+			axis:false,
+			showCopyright:false,
+			showNavigation:false
+			});
+
+		p1 = board.create('point',[-4,0],{
+			name:'p1',
+			fixed:true,
+			size: 3,
+			infoboxtext:'infoboxtext',
+			strokeColor: 'black',
+			fillColor: 'white',
+			strokeWidth: 2,
+			strokeOpacity: 1,
+			fillOpacity: 1,
+		});
+		p2 = board.create('point',[0,0],{
+			name:'p1',
+			fixed:true,
+			size: 3,
+			infoboxtext:'infoboxtext',
+			strokeColor: 'black',
+			fillColor: 'white',
+			strokeWidth: 2,
+			strokeOpacity: 1,
+			fillOpacity: 1,
+		});
+		p3 = board.create('point',[4,-1],{
+			name:'p1',
+			fixed:false,
+			size: 3,
+			infoboxtext:'infoboxtext',
+			strokeColor: 'black',
+			fillColor: 'white',
+			strokeWidth: 2,
+			strokeOpacity: 1,
+			fillOpacity: 1,
+		});
+		var ang1 = board.create('angle',[p1,p2,p3],{name:''});
+		var cc1 = board.create('circumcircle', [p1, p2, p3], {
+			strokeColor: '#51BAE8 ',
+		});
+	</script>
+</section>
+
+<section data-background-transition="" slide-template="">
+	<h1>CLC 2016</h1>
+</section>
+
+<section data-markdown data-background="img/gs_retina.jpg" data-background-transition="fade" slide-template="chapter">
+	<script type="text/template">
+		### Wooden Gridshell
+
+		Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+	</script>
+</section>
+
+<section>
+	<section data-background="img/details_retina.jpg" data-background-transition="fade" slide-template="chapter" data-transition="slide">
+	    <h4> Details </h4>
+	    <p>
+	      Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+	    </p>
+	</section>
+	<!--  SLIDE ENFANT : image full width -->
+	<section data-state="slide_type_2" data-transition-speed='fast' slide-template="">
+	    <img src="img/noeud.svg" width="100%">
+	</section>
+
+	<!--  SLIDE ENFANT : image full width -->
+	<section data-state="slide_type_2" data-transition-speed='fast' slide-template="">
+	    <img src="img/section.svg" width="100%">
+	</section>
+
+	<!--  SLIDE ENFANT : image -->
+	<section data-state="slide_type_2" data-transition-speed='fast' data-background="img/details_retina.jpg" slide-template="chapter">
+	  <!-- <script type="text/template"> -->
+	    <h4> Node </h4>
+	    <img src="img/details_node.svg" >
+	    <!-- ![image](img/details_node.svg) -->
+	  <!-- </script> -->
+	</section>
+
+	<!--  SLIDE ENFANT : image full width -->
+	<section data-state="slide_type_2" data-transition-speed='fast' slide-template="">
+	    <img src="img/details_node.svg" width="100%">
+	</section>
+</section>
+
+    
+
+	</div>
+</div>
+
+
+    <script src="/revealjs/lib/js/head.min.js"></script>
+<script src="/revealjs/js/reveal.js"></script>
+
+<!--  REVEAL.js SLIDE CONFIG-->
+<script>
+	Reveal.initialize({
+		history: true,
+
+		math: {
+			mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+			config: 'TeX-AMS_HTML-full'
+		},
+
+		menu: {
+			side: 'right',
+			numbers: true,
+			titleSelector: 'h1, h2, h3',
+			hideMissingTitles: false,
+			markers: true,
+			custom: false,
+			themes: false,
+
+		transitions: false,
+		openButton: true,
+		openSlideNumber: false,
+		keyboard: true
+		},
+
+		dependencies: [
+			{ src: '/revealjs/plugin/tagcloud/tagcloud.js', async: true } ,
+			{ src: '/revealjs/plugin/menu/menu.js' },
+			{ src: '/revealjs/plugin/math/math.js', async: true },
+			{ src: '/revealjs/plugin/markdown/marked.js' },
+			{ src: '/revealjs/plugin/markdown/markdown.js' },
+			{ src: '/revealjs/plugin/notes/notes.js', async: true },
+			{ src: '/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '/revealjs/plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
+			]
+	});
+	Reveal.configure({ slideNumber: true });
+</script>
+
+
+  </body>
+</html>

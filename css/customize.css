@@ -1,0 +1,98 @@
+body {
+    min-width: 320px;
+    color: #777;
+    line-height: 1.6;
+    /* non standard mais pratique pour les titres*/
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* VS */
+.pure-sm-hide, .pure-md-hide, .pure-lg-hide, .pure-xl-hide{ display:none;}
+.pure-sm-show, .pure-md-show, .pure-lg-show, .pure-xl-show{ display:unset;}
+
+/* SM */
+@media screen and (min-width: 35.5em){
+    .pure-sm-hide{ display:unset;}
+    .pure-sm-show{ display:none;}
+}
+
+/* MD */
+@media screen and (min-width: 48em){
+    .pure-md-hide{display:unset;}
+    .pure-md-show{ display:none;}
+}
+
+/* LG */
+@media screen and (min-width: 64em){
+    .pure-lg-hide{display:unset;}
+    .pure-lg-show{display:none;}
+}
+
+/* XL */
+@media screen and (min-width: 80em){
+    .pure-xl-hide{display:unset;}
+    .pure-xl-show{display:none;}
+}
+
+.home-fullbg {
+    margin: auto;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-image: url(../blue.png);
+    /*background-image: url(../bb.jpg);*/
+    /*background-size: cover;*/
+    filter: blur(0.25px);
+}
+
+.home-link, .home-link .pure-menu-link, .home-link a, .home-link ul, .home-link li {
+    font-family: 'Cabin Sketch', 'cursive';
+    color:white;
+    font-size:2rem;
+    background-color: transparent;
+    text-align: center;
+}
+
+.home-link li {
+    list-style: none;
+}
+
+.home-link a:hover {
+    /*color:#333;*/
+    background-color: transparent;
+    -moz-transform: translate(-2px, -2px);
+    -ms-transform: translate(-2px, -2px);
+    -o-transform: translate(-2px, -2px);
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+
+    -webkit-transform: rotateZ(2deg); /* Safari */
+    transform: rotateZ(2deg);
+}
+
+.home-link a:hover {
+    -webkit-transition-duration: 400ms;
+    -moz-transition-duration: 400ms;
+    -o-transition-duration: 400ms;
+    transition-duration: 400ms;
+}
+
+.home-link li:hover {
+    -moz-transform: translate(-2px, -2px);
+    -ms-transform: translate(-2px, -2px);
+    -o-transform: translate(-2px, -2px);
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px)
+}
+
+.home-link .pure-menu-link{
+    padding: 0.5em 0.5em;
+}
+table {
+    width: 100%;
+}
